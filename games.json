@@ -1,5 +1,23 @@
 [
-  {"id":"sudoku","url":"https://rsudoku.pl/","pl":"Sudoku","en":"Sudoku"},
-  {"id":"domino","url":"https://domino.games-chest.com/","pl":"Domino","en":"Domino"},
-  {"id":"eight-aces","url":"https://eightaces.games-chest.com/","pl":"Osiem Asów","en":"Eight Aces"}
+  {
+    "id": "sudoku",
+    "url": "https://rsudoku.pl/",
+    "pl": "Sudoku",
+    "en": "Sudoku",
+    "icon": "sudoku-logo.svg"
+  },
+  {
+    "id": "domino",
+    "url": "https://domino.games-chest.com/",
+    "pl": "Domino",
+    "en": "Domino",
+    "icon": "domino-logo.svg"
+  },
+  {
+    "id": "eight-aces",
+    "url": "https://eightaces.games-chest.com/",
+    "pl": "Osiem Asów",
+    "en": "Eight Aces",
+    "icon": "eightaces-logo.svg"
+  }
 ]
