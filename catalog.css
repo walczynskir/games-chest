@@ -43,10 +43,15 @@ button {
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
 
 :root {
-  --catalog-banner: color-mix(in srgb, var(--palette-accent) 24%, var(--palette-paper));
-  --catalog-tile: color-mix(in srgb, var(--palette-accent) 12%, var(--palette-paper));
-  --catalog-banner-edge: var(--palette-accent);
-  --catalog-banner-ink: var(--palette-ink);
+  --catalog-banner: color-mix(in srgb, var(--palette-accent) 30%, var(--palette-paper));
+  --catalog-tile: color-mix(in srgb, var(--palette-accent) 13%, var(--palette-paper));
+  --catalog-banner-edge: var(--palette-primary-bg, var(--palette-accent));
+}
+@supports (color: hsl(from red h s l)) {
+  :root {
+    --catalog-banner: hsl(from var(--palette-accent) h s 74%);
+    --catalog-tile: hsl(from var(--palette-accent) h calc(s * .55) 91%);
+  }
 }
 header {
   background: var(--catalog-banner);
@@ -54,25 +59,10 @@ header {
   border-radius: 0 0 .65rem .65rem;
   padding-inline: .75rem;
 }
-header strong { color: var(--catalog-banner-ink); }
+header strong { color: var(--palette-ink); }
 .game { background: var(--catalog-tile); }
-.game:hover { background: var(--catalog-banner); color: var(--catalog-banner-ink); }
+.game:hover { background: var(--catalog-banner); }
 
-:root[data-theme="tangerine"] {
-  --catalog-banner: #ff8b28;
-  --catalog-tile: #ffd0a0;
-  --catalog-banner-edge: #ff8b28;
-}
-[data-theme="tangerine"] button {
-  background: var(--catalog-banner);
-  color: var(--palette-ink);
-}
-:root[data-theme="ukraine"] {
-  --catalog-banner: var(--palette-accent);
-  --catalog-banner-edge: var(--palette-primary-bg);
-  --catalog-banner-ink: #fff;
-}
-[data-theme="ukraine"] header { border-bottom-width: .45rem; }
 :root[data-theme="contrast"] {
   --catalog-banner: var(--palette-paper);
   --catalog-tile: var(--palette-paper);
