@@ -42,25 +42,39 @@ button {
 :focus-visible { outline: 2px solid var(--palette-accent); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
 
-/* Bright surfaces for Tangerine, with dark text for readability. */
-:root[data-theme="tangerine"] {
-  --catalog-orange: #ff8b28;
-  --catalog-orange-soft: #ffd0a0;
+:root {
+  --catalog-banner: color-mix(in srgb, var(--palette-accent) 24%, var(--palette-paper));
+  --catalog-tile: color-mix(in srgb, var(--palette-accent) 12%, var(--palette-paper));
+  --catalog-banner-edge: var(--palette-accent);
+  --catalog-banner-ink: var(--palette-ink);
 }
-[data-theme="tangerine"] header {
-  background: var(--catalog-orange);
-  border-bottom-color: var(--catalog-orange);
+header {
+  background: var(--catalog-banner);
+  border-bottom-color: var(--catalog-banner-edge);
   border-radius: 0 0 .65rem .65rem;
   padding-inline: .75rem;
 }
-[data-theme="tangerine"] header strong { color: var(--palette-ink); }
-[data-theme="tangerine"] .game {
-  background: var(--catalog-orange-soft);
-  border-inline-start-color: var(--catalog-orange);
+header strong { color: var(--catalog-banner-ink); }
+.game { background: var(--catalog-tile); }
+.game:hover { background: var(--catalog-banner); color: var(--catalog-banner-ink); }
+
+:root[data-theme="tangerine"] {
+  --catalog-banner: #ff8b28;
+  --catalog-tile: #ffd0a0;
+  --catalog-banner-edge: #ff8b28;
 }
-[data-theme="tangerine"] .game:hover { background: var(--catalog-orange); }
-[data-theme="tangerine"] .game img { background: var(--palette-paper); }
 [data-theme="tangerine"] button {
-  background: var(--catalog-orange);
+  background: var(--catalog-banner);
   color: var(--palette-ink);
 }
+:root[data-theme="ukraine"] {
+  --catalog-banner: var(--palette-accent);
+  --catalog-banner-edge: var(--palette-primary-bg);
+  --catalog-banner-ink: #fff;
+}
+[data-theme="ukraine"] header { border-bottom-width: .45rem; }
+:root[data-theme="contrast"] {
+  --catalog-banner: var(--palette-paper);
+  --catalog-tile: var(--palette-paper);
+}
+[data-theme="contrast"] .game:hover { background: var(--palette-wash); }
