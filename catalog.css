@@ -21,7 +21,7 @@ h2 { font-size: .95rem; margin-block: 1rem .5rem; }
 }
 .game { border-inline-start: 3px solid var(--palette-accent); }
 .game:hover { background: var(--palette-wash); }
-.game img { background: color-mix(in srgb, var(--palette-accent) 14%, #fffaf0); border-radius: .3rem; padding: .15rem; flex-shrink: 0; }
+.game img { background: var(--palette-wash); border-radius: .3rem; padding: .15rem; flex-shrink: 0; }
 footer { border-top: 1px solid var(--palette-line); padding-block: .75rem 1.5rem; }
 summary { cursor: pointer; width: fit-content; }
 form { max-width: 36rem; }
@@ -42,29 +42,15 @@ button {
 :focus-visible { outline: 2px solid var(--palette-accent); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
 
-:root {
-  --catalog-banner: color-mix(in srgb, var(--palette-accent) 30%, var(--palette-paper));
-  --catalog-tile: color-mix(in srgb, var(--palette-accent) 13%, var(--palette-paper));
-  --catalog-banner-edge: var(--palette-primary-bg, var(--palette-accent));
-}
-@supports (color: hsl(from red h s l)) {
-  :root {
-    --catalog-banner: hsl(from var(--palette-accent) h s 74%);
-    --catalog-tile: hsl(from var(--palette-accent) h calc(s * .55) 91%);
-  }
-}
 header {
-  background: var(--catalog-banner);
-  border-bottom-color: var(--catalog-banner-edge);
+  background: var(--palette-accent);
+  border-bottom-color: var(--palette-primary-bg, var(--palette-accent));
   border-radius: 0 0 .65rem .65rem;
   padding-inline: .75rem;
 }
-header strong { color: var(--palette-ink); }
-.game { background: var(--catalog-tile); }
-.game:hover { background: var(--catalog-banner); }
+header strong { color: #fff; }
+header :focus-visible { outline-color: var(--palette-paper); }
 
-:root[data-theme="contrast"] {
-  --catalog-banner: var(--palette-paper);
-  --catalog-tile: var(--palette-paper);
-}
-[data-theme="contrast"] .game:hover { background: var(--palette-wash); }
+[data-theme="contrast"] header { background: var(--palette-paper); }
+[data-theme="contrast"] header strong { color: var(--palette-ink); }
+[data-theme="contrast"] header :focus-visible { outline-color: var(--palette-accent); }
