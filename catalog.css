@@ -41,3 +41,26 @@ button {
 }
 :focus-visible { outline: 2px solid var(--palette-accent); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+
+/* Bright surfaces for Tangerine, with dark text for readability. */
+:root[data-theme="tangerine"] {
+  --catalog-orange: #ff8b28;
+  --catalog-orange-soft: #ffd0a0;
+}
+[data-theme="tangerine"] header {
+  background: var(--catalog-orange);
+  border-bottom-color: var(--catalog-orange);
+  border-radius: 0 0 .65rem .65rem;
+  padding-inline: .75rem;
+}
+[data-theme="tangerine"] header strong { color: var(--palette-ink); }
+[data-theme="tangerine"] .game {
+  background: var(--catalog-orange-soft);
+  border-inline-start-color: var(--catalog-orange);
+}
+[data-theme="tangerine"] .game:hover { background: var(--catalog-orange); }
+[data-theme="tangerine"] .game img { background: var(--palette-paper); }
+[data-theme="tangerine"] button {
+  background: var(--catalog-orange);
+  color: var(--palette-ink);
+}
