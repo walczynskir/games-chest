@@ -9,7 +9,7 @@
   } catch {}
 
   function updateLinks() {
-    for (const link of links) {
+    for (const link of document.querySelectorAll('[data-umami-event-game]')) {
       const url = new URL(link.href);
       url.searchParams.delete('gc-recent');
       if (recent.length) url.searchParams.set('gc-recent', recent.join(','));
@@ -17,13 +17,13 @@
     }
   }
 
-  for (const link of links) {
-    link.addEventListener('click', () => {
-      const id = link.dataset.umamiEventGame;
-      recent = [id, ...recent.filter(game => game !== id)].slice(0, 4);
-      try { localStorage.setItem(key, JSON.stringify(recent)); } catch {}
-      updateLinks();
-    });
-  }
+  document.addEventListener('click', event => {
+    const link = event.target.closest('[data-umami-event-game]');
+    if (!link) return;
+    const id = link.dataset.umamiEventGame;
+    recent = [id, ...recent.filter(game => game !== id)].slice(0, 4);
+    try { localStorage.setItem(key, JSON.stringify(recent)); } catch {}
+    updateLinks();
+  });
   updateLinks();
 })();

@@ -1,88 +1,43 @@
 <!doctype html>
-<html lang="pl">
+<html lang="pl" data-theme="porcelain">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Games Chest — klasyczne gry i łamigłówki na chwilę odpoczynku.">
-<title>Games Chest — klasyczne gry i łamigłówki</title>
-<style>
-:root{color-scheme:light;--paper:#fbf4e7;--ink:#29271f;--green:#244938;--line:#d8c8ad;--muted:#645747}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
-header,main,footer{width:min(68rem,calc(100% - 2.5rem));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--line)}
-.brand,h1,h2,h3{font-family:Georgia,serif}
-.brand{font-weight:bold;font-size:1.25rem}
-button,a{font:inherit}
-button{background:transparent;border:1px solid var(--line);border-radius:2rem;padding:.3rem .8rem;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid #a54d2b;outline-offset:4px}
-.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center;padding:clamp(2rem,8vw,6rem) 0}
-.kicker{color:var(--green);font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.12em}
-h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:1;margin:.35rem 0 1rem;letter-spacing:-.05em}
-.hero p:not(.kicker){max-width:35ch;color:var(--muted);font-size:1.15rem}
-.hero svg{display:block;width:100%;max-width:22rem;justify-self:center}
-h2{font-size:2rem;margin:0 0 .8rem}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-article{display:flex;flex-direction:column;align-items:flex-start;background:#fffaf0;border:1px solid var(--line);border-radius:1rem;padding:clamp(1rem,4vw,2rem)}
-article svg,article img{width:4rem;height:4rem;color:var(--green)}
-h3{font-size:1.7rem;margin:.55rem 0 0}
-article p{margin:.2rem 0 1.1rem;color:var(--muted)}
-.play{margin-top:auto;display:inline-block;padding:.45rem .9rem;border-radius:.45rem}
-.play{background:var(--green);color:white;text-decoration:none}
-.play:hover{background:#173226}
-.suggestion{margin-top:3rem;max-width:40rem}
-.suggestion label{display:block;margin-top:.75rem;font-weight:650}
-.suggestion input,.suggestion textarea,.suggestion select{width:100%;font:inherit;color:inherit;background:#fffaf0;border:1px solid var(--line);border-radius:.4rem;padding:.5rem}
-.suggestion textarea{resize:vertical}
-.suggestion button{margin-top:1rem}
-footer{margin-top:3rem;padding:1rem 0;border-top:1px solid var(--line);color:var(--muted)}
-@media(max-width:38rem){.hero,.cards{grid-template-columns:1fr}.hero svg{max-width:14rem}}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Games Chest. Klasyczne gry i łamigłówki na krótką przerwę.">
+<title>Games Chest</title>
+<link rel="stylesheet" href="shared-palettes.css">
+<link rel="stylesheet" href="catalog.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a4d24ffd-fa55-44e7-8c3b-dc5a5e42a2f2"></script>
+<script defer src="game-locales.js"></script>
+<script defer src="catalog.js"></script>
+<script defer src="recent-games.js"></script>
 </head>
 <body>
-<header><span class="brand">Games Chest</span><button type="button" id="language" lang="en" hidden>English</button></header>
+<header>
+<strong>Games Chest</strong>
+<div class="preferences">
+<label><span class="sr-only">Language / Język</span><select id="language"><option value="pl">Polski</option></select></label>
+<label><span class="sr-only" id="appearance">Wygląd</span><select id="theme"><option value="porcelain">Porcelana</option></select></label>
+</div>
+</header>
 <main>
-<section class="hero" aria-labelledby="title">
-<div><p class="kicker" data-en="Classic games &amp; puzzles">Klasyczne gry i łamigłówki</p>
-<h1 id="title" data-en="A little time to play">Chwila na grę</h1>
-<p data-en="Pick a classic game with a fresh look. A little thinking and time to play at your own pace.">Wybierz klasyczną grę w nowym wydaniu. Trochę myślenia i czas na rozgrywkę we własnym tempie.</p></div>
-<svg viewBox="0 0 330 235" aria-hidden="true">
-<ellipse cx="166" cy="204" rx="135" ry="17" fill="#e5d4b7"/>
-<path d="M55 119 83 57h171l23 62Z" fill="#a66442" stroke="#4c352a" stroke-width="4"/>
-<path d="M78 102h174M84 81h165" stroke="#c98c62" stroke-width="4"/>
-<g transform="rotate(16 179 102)"><rect x="156" y="66" width="46" height="81" rx="6" fill="#fff8e9" stroke="#244938" stroke-width="3"/><path d="M157 106h44" stroke="#244938" stroke-width="2"/><g fill="#244938"><circle cx="168" cy="80" r="4"/><circle cx="190" cy="94" r="4"/><circle cx="179" cy="125" r="4"/></g></g>
-<rect x="52" y="115" width="228" height="84" rx="10" fill="#a66442" stroke="#4c352a" stroke-width="4"/>
-<path d="M56 146h220m-220 26h220" stroke="#c98c62" stroke-width="4"/>
-<path d="M86 118v78m160-78v78" stroke="#674536" stroke-width="12"/>
-<rect x="149" y="119" width="35" height="37" rx="5" fill="#e3b963" stroke="#4c352a" stroke-width="3"/><circle cx="166.5" cy="137" r="4" fill="#4c352a"/>
-</svg>
+<h1 data-copy="intro">Masz kilka minut na grę?</h1>
+<section id="favorites" aria-labelledby="favorites-title" hidden>
+<h2 id="favorites-title" data-copy="frequent">Najczęściej otwierane</h2>
+<div class="tiles"></div>
 </section>
-<section aria-labelledby="games">
-<h2 id="games" data-en="Pick a game">Wybierz grę</h2>
-<div class="cards">
-<article>
-<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="5" y="5" width="54" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M23 5v54M41 5v54M5 23h54M5 41h54" stroke="currentColor" opacity=".5"/><g font-family="Georgia,serif" font-size="14" fill="currentColor"><text x="10" y="19">3</text><text x="28" y="37">7</text><text x="46" y="55">5</text></g></svg>
-<h3 data-en="Sudoku">Sudoku</h3>
-<p data-en="Solve Sudoku puzzles and sharpen your skills. Pick a puzzle from the library or enter your own.">Rozwiązuj sudoku i doskonal swoje umiejętności. Wybierz planszę z biblioteki lub wprowadź własny układ.</p>
-<a class="play" data-umami-event="play-game" data-umami-event-game="sudoku" href="https://rsudoku.pl/" data-en="Play Sudoku">Zagraj w Sudoku</a>
-</article>
-<article>
-<img src="domino-logo.svg" width="64" height="64" alt="">
-<h3>Domino</h3>
-<p data-en="Match tiles and score points against the computer in a game to 150.">Dokładaj kamienie i zdobywaj punkty w meczu z komputerem do 150.</p>
-<a class="play" data-umami-event="play-game" data-umami-event-game="domino" href="https://domino.games-chest.com/" data-en="Play Domino">Zagraj w Domino</a>
-</article>
-<article>
-<img src="eightaces-logo.svg" width="64" height="64" alt="">
-<h3 data-en="Eight Aces">Osiem Asów</h3>
-<p data-en="A two-deck solitaire game. Build eight piles from ace to king. Also known as Forty and Eight.">Pasjans na dwie talie. Ułóż osiem stosów od asa do króla. Wariant znany jako Forty and Eight.</p>
-<a class="play" data-umami-event="play-game" data-umami-event-game="eight-aces" href="https://eightaces.games-chest.com/" data-en="Play Eight Aces">Zagraj w Osiem Asów</a>
-</article>
+<section aria-labelledby="all-title">
+<h2 id="all-title" data-copy="all">Wszystkie gry</h2>
+<div class="tiles" id="all-games">
+<a class="game" data-umami-event="play-game" data-umami-event-game="sudoku" href="https://rsudoku.pl/"><img src="sudoku-logo.svg" alt="" width="36" height="36"><span>Sudoku</span></a>
+<a class="game" data-umami-event="play-game" data-umami-event-game="domino" href="https://domino.games-chest.com/"><img src="domino-logo.svg" alt="" width="36" height="36"><span>Domino</span></a>
+<a class="game" data-umami-event="play-game" data-umami-event-game="eight-aces" href="https://eightaces.games-chest.com/"><img src="eightaces-logo.svg" alt="" width="36" height="36"><span>Osiem Asów</span></a>
 </div>
 </section>
-<section class="suggestion" aria-labelledby="feedback-title">
-<h2 id="feedback-title" data-en="Send feedback">Napisz do mnie</h2>
+</main>
+<footer>
+<details class="suggestion"><summary data-copy="feedback">Zaproponuj grę lub zgłoś błąd</summary>
+<p id="feedback-title" data-en="Suggest a new game and include a link to the rules or paste the instructions if you have them. For bugs, describe what you did just before the issue appeared.">Proponujesz nową grę? Jeśli możesz, dodaj link do zasad lub wklej instrukcję. Zgłaszasz błąd? Opisz, co zrobiłeś tuż przed jego wystąpieniem.</p>
 <form id="game-feedback">
 <label for="feedback-type" data-en="Category">Kategoria</label>
 <select id="feedback-type" name="kind">
@@ -93,53 +48,10 @@ footer{margin-top:3rem;padding:1rem 0;border-top:1px solid var(--line);color:var
 <label for="feedback-game" data-en="Game or page name">Nazwa gry lub strony</label>
 <input id="feedback-game" name="game" required maxlength="120">
 <label for="feedback-description" data-en="Description">Opis</label>
-<textarea id="feedback-description" name="description" rows="5" aria-describedby="feedback-tip"></textarea>
-<p id="feedback-tip" data-en="Suggest a new game and include a link to the rules or paste the instructions if you have them. For bugs, describe what you did just before the issue appeared.">Proponujesz nową grę? Jeśli możesz, dodaj link do zasad lub wklej instrukcję. Zgłaszasz błąd? Opisz, co zrobiłeś tuż przed jego wystąpieniem.</p>
+<textarea id="feedback-description" name="description" rows="5" aria-describedby="feedback-title"></textarea>
 <button type="submit" data-en="Open email draft">Otwórz szkic e-maila</button>
 </form>
-</section>
-</main>
-<footer data-en="Games Chest brings together games our family enjoys. We’re starting with dominoes and sudoku. More games will follow.">Games Chest to kolekcja gier, które lubimy w naszej rodzinie. Zaczynamy od domina i sudoku. Z czasem pojawią się następne.</footer>
-<script src="recent-games.js" defer></script>
-<script>
-const languageButton = document.querySelector('#language');
-const translations = Array.from(document.querySelectorAll('[data-en]'), element => ({
-  element,
-  polish: element.textContent
-}));
-const recipient = 'walczynskir@gmail.com';
-
-function openEmailDraft(subject, body) {
-  window.location.href = 'mailto:' + recipient + '?subject=' +
-    encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-}
-
-const feedbackForm = document.querySelector('#game-feedback');
-feedbackForm.elements.kind.addEventListener('change', () => {
-  feedbackForm.elements.description.required = feedbackForm.elements.kind.value !== 'new-game';
-});
-feedbackForm.addEventListener('submit', event => {
-  event.preventDefault();
-  const { kind, game, description } = event.currentTarget.elements;
-  const name = game.value.trim();
-  const details = description.value.trim();
-  if (!name) return game.focus();
-  if (!details && kind.value !== 'new-game') return description.focus();
-  const label = kind.selectedOptions[0].textContent;
-  openEmailDraft('Games Chest — ' + label + ' — ' + name, details);
-});
-
-languageButton.hidden = false;
-languageButton.addEventListener('click', () => {
-  const english = document.documentElement.lang === 'pl';
-  document.documentElement.lang = english ? 'en' : 'pl';
-  document.title = english ? 'Games Chest — classic games and puzzles' : 'Games Chest — klasyczne gry i łamigłówki';
-  for (const { element, polish } of translations) {
-    element.textContent = english ? element.dataset.en : polish;
-  }
-  languageButton.textContent = english ? 'Polski' : 'English';
-  languageButton.lang = english ? 'pl' : 'en';
-});
-</script>
+</details>
+</footer>
 </body>
 </html>
