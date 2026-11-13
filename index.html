@@ -1,42 +1,31 @@
 <!doctype html>
-<html lang="pl" data-theme="porcelain">
+<html lang="pl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Games Chest. Klasyczne gry i łamigłówki na krótką przerwę.">
 <title>Games Chest</title>
-<link rel="stylesheet" href="shared-palettes.css">
-<link rel="stylesheet" href="catalog.css?v=6">
+<link rel="stylesheet" href="catalog.css?v=7">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a4d24ffd-fa55-44e7-8c3b-dc5a5e42a2f2"></script>
 <script defer src="game-locales.js"></script>
-<script defer src="catalog.js"></script>
+<script defer src="catalog.js?v=7"></script>
 <script defer src="recent-games.js"></script>
 </head>
 <body>
 <header>
-<strong>Games Chest</strong>
-<div class="preferences">
+<h1>Games Chest</h1>
 <label><span class="sr-only">Language / Język</span><select id="language"><option value="pl">Polski</option></select></label>
-<label><span class="sr-only" id="appearance">Wygląd</span><select id="theme"><option value="porcelain">Porcelana</option></select></label>
-</div>
 </header>
 <main>
-<h1 data-copy="intro">Masz kilka minut na grę?</h1>
-<section id="favorites" aria-labelledby="favorites-title" hidden>
-<h2 id="favorites-title" data-copy="frequent">Najczęściej otwierane</h2>
-<div class="tiles"></div>
-</section>
-<section aria-labelledby="all-title">
-<h2 id="all-title" data-copy="all">Wszystkie gry</h2>
 <div class="tiles" id="all-games">
-<a class="game" data-umami-event="play-game" data-umami-event-game="sudoku" href="https://rsudoku.pl/"><img src="sudoku-logo.svg" alt="" width="36" height="36"><span>Sudoku</span></a>
-<a class="game" data-umami-event="play-game" data-umami-event-game="domino" href="https://domino.games-chest.com/"><img src="domino-logo.svg" alt="" width="36" height="36"><span>Domino</span></a>
-<a class="game" data-umami-event="play-game" data-umami-event-game="eight-aces" href="https://eightaces.games-chest.com/"><img src="eightaces-logo.svg" alt="" width="36" height="36"><span>Osiem Asów</span></a>
+<a class="game" data-umami-event="play-game" data-umami-event-game="sudoku" href="https://rsudoku.pl/"><img src="sudoku-logo.svg" alt="" width="64" height="64"><span>Sudoku</span></a>
+<a class="game" data-umami-event="play-game" data-umami-event-game="domino" href="https://domino.games-chest.com/"><img src="domino-logo.svg" alt="" width="64" height="64"><span>Domino</span></a>
+<a class="game" data-umami-event="play-game" data-umami-event-game="eight-aces" href="https://eightaces.games-chest.com/"><img src="eightaces-logo.svg" alt="" width="64" height="64"><span>Osiem Asów</span></a>
 </div>
-</section>
 </main>
 <footer>
-<section class="suggestion" aria-labelledby="feedback-heading"><h2 id="feedback-heading" data-copy="feedback">Zaproponuj grę lub zgłoś błąd</h2>
+<details class="suggestion">
+<summary data-copy="feedback">Zaproponuj grę lub zgłoś błąd</summary>
 <p id="feedback-title" data-en="Suggest a new game and include a link to the rules or paste the instructions if you have them. For bugs, describe what you did just before the issue appeared.">Proponujesz nową grę? Jeśli możesz, dodaj link do zasad lub wklej instrukcję. Zgłaszasz błąd? Opisz, co zrobiłeś tuż przed jego wystąpieniem.</p>
 <form id="game-feedback">
 <label for="feedback-type" data-en="Category">Kategoria</label>
@@ -51,7 +40,7 @@
 <textarea id="feedback-description" name="description" rows="5" aria-describedby="feedback-title"></textarea>
 <button type="submit" data-en="Open email draft">Otwórz szkic e-maila</button>
 </form>
-</section>
+</details>
 </footer>
 </body>
 </html>

@@ -1,56 +1,75 @@
 * { box-sizing: border-box; }
-body {
-  margin: 0 auto;
-  max-width: 55rem;
-  padding-inline: clamp(1rem, 4vw, 2rem);
-  color: var(--palette-ink);
-  background: var(--palette-bg);
+:root {
+  /* The Classic table and card colors from Eight Aces. */
+  --felt: radial-gradient(ellipse at 50% 38%, #287846, #125032 78%);
+  --paper: #f7f5eb;
+  --ink: #182d20;
+  --accent: #225e3b;
+  --line: #acbeae;
+  color: var(--paper);
+  background: #125032 var(--felt);
+  min-height: 100%;
   font: 1rem/1.5 system-ui, sans-serif;
 }
-header, .preferences, .tiles { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
-header { justify-content: space-between; padding-block: .75rem; border-bottom: 3px solid var(--palette-accent); }
-header strong, h1, h2 { color: var(--palette-accent); }
-main { padding-block: 1rem 1.75rem; }
-h1 { font-size: clamp(1.35rem, 4vw, 1.8rem); margin-block: .25rem 1.25rem; }
-h2 { font-size: .95rem; margin-block: 1rem .5rem; }
-.game {
-  display: inline-flex; align-items: center; gap: .5rem;
-  min-height: 48px; padding: .3rem .65rem;
-  border: 1px solid var(--palette-control-line, var(--palette-line)); border-radius: .55rem;
-  background: var(--palette-paper); color: inherit; text-decoration: none;
+body {
+  margin: 0 auto;
+  max-width: 48rem;
+  padding-inline: clamp(1rem, 5vw, 2rem);
 }
-.game { border-inline-start: 3px solid var(--palette-accent); }
-.game:hover { background: var(--palette-wash); }
-.game img { background: var(--palette-wash); border-radius: .3rem; padding: .15rem; flex-shrink: 0; }
-footer { border-top: 1px solid var(--palette-line); padding-block: .75rem 1.5rem; }
-summary { cursor: pointer; width: fit-content; }
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding-block: 1rem;
+}
+h1 { margin: 0; font-size: 1.125rem; }
+main { padding-block: 1.25rem; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  gap: .75rem;
+}
+@media (max-width: 32rem) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.game {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: .5rem;
+  min-height: 7.5rem;
+  padding: .65rem;
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: center;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+.game:hover { background: #deebdd; text-decoration: underline; }
+.game img { display: block; }
+footer { padding-block: .25rem 1.5rem; }
+summary {
+  cursor: pointer;
+  width: fit-content;
+  padding-block: .45rem;
+  text-decoration: underline;
+}
 form { max-width: 36rem; }
 form label { display: block; margin-block: .75rem .2rem; }
 form input, textarea { width: 100%; }
 textarea { resize: vertical; }
 button, select, input, textarea {
-  font: inherit; color: inherit; background: var(--palette-paper);
-  border: 1px solid var(--palette-control-line, var(--palette-line)); border-radius: .4rem; padding: .3rem .5rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: .4rem;
+  padding: .4rem .55rem;
 }
-button {
-  margin-top: .75rem;
-  cursor: pointer;
-  background: var(--palette-primary-bg, var(--palette-accent));
-  color: var(--palette-primary-ink, #fff);
-  border-color: var(--palette-accent);
-}
-:focus-visible { outline: 2px solid var(--palette-accent); outline-offset: 3px; }
+button { margin-top: .75rem; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
-
-header {
-  background: var(--palette-accent);
-  border-bottom-color: var(--palette-primary-bg, var(--palette-accent));
-  border-radius: 0 0 .65rem .65rem;
-  padding-inline: .75rem;
-}
-header strong { color: #fff; }
-header :focus-visible { outline-color: var(--palette-paper); }
-
-[data-theme="contrast"] header { background: var(--palette-paper); }
-[data-theme="contrast"] header strong { color: var(--palette-ink); }
-[data-theme="contrast"] header :focus-visible { outline-color: var(--palette-accent); }
