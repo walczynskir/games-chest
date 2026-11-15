@@ -1,5 +1,5 @@
 (() => {
-  const { languages, names, catalog } = DominoLocales;
+  const { languages, names } = DominoLocales;
   const copy = {
     pl: ['Zaproponuj grę lub zgłoś błąd', 'Osiem Asów'],
     en: ['Suggest a game or report an issue', 'Eight Aces'],
@@ -24,11 +24,33 @@
     it: ['Come installare un gioco', 'Apri il gioco nel browser. In Chrome o Edge, usa l’opzione di installazione nel menu (su Android potrebbe essere in «Aggiungi a schermata Home»). In Safari su iPhone, scegli Condividi → Aggiungi alla schermata Home. Sul Mac, scegli Aggiungi al Dock.'],
     uk: ['Як установити гру', 'Відкрийте гру в браузері. У Chrome або Edge виберіть установлення в меню (на Android ця опція може бути в пункті «Додати на головний екран»). У Safari на iPhone виберіть «Поділитися» → «На початковий екран». На Mac виберіть «Додати на панель Dock».']
   };
+  // Each row follows the language order in DominoLocales.languages.
+  const labels = {
+    language: ['Język', 'Language', 'Idioma', 'Sprache', '语言', 'भाषा', 'Langue', 'اللغة', 'Lingua', 'Мова'],
+    feedbackHelp: [
+      'Proponujesz nową grę? Jeśli możesz, dodaj link do zasad lub wklej instrukcję. Zgłaszasz błąd? Opisz, co zrobiłeś tuż przed jego wystąpieniem.',
+      'Suggesting a new game? If you can, include a link to the rules or paste the instructions. Reporting a bug? Describe what you did just before it appeared.',
+      '¿Propones un juego nuevo? Si puedes, añade un enlace a las reglas o pega las instrucciones. ¿Informas de un error? Describe lo que hiciste justo antes de que apareciera.',
+      'Schlägst du ein neues Spiel vor? Verlinke nach Möglichkeit die Regeln oder füge die Anleitung ein. Meldest du einen Fehler? Beschreibe, was du unmittelbar davor gemacht hast.',
+      '想推荐新游戏？如果可以，请附上规则链接或粘贴玩法说明。要报告错误？请描述错误出现前你做了什么。',
+      'नया गेम सुझा रहे हैं? हो सके तो नियमों का लिंक दें या निर्देश यहाँ चिपकाएँ। किसी गड़बड़ी की सूचना दे रहे हैं? बताएँ कि उसके आने से ठीक पहले आपने क्या किया था।',
+      'Vous proposez un nouveau jeu ? Si possible, ajoutez un lien vers les règles ou copiez-les ici. Vous signalez un bug ? Décrivez ce que vous avez fait juste avant son apparition.',
+      'هل تقترح لعبة جديدة؟ أضف رابطًا للقواعد أو ألصق التعليمات إن أمكن. هل تبلغ عن خلل؟ صف ما فعلته قبل ظهوره مباشرةً.',
+      'Vuoi proporre un nuovo gioco? Se puoi, aggiungi un link alle regole o incolla le istruzioni. Vuoi segnalare un errore? Descrivi cosa hai fatto subito prima che si verificasse.',
+      'Пропонуєте нову гру? Якщо можете, додайте посилання на правила або вставте інструкцію. Повідомляєте про помилку? Опишіть, що ви зробили безпосередньо перед її появою.'
+    ],
+    category: ['Kategoria', 'Category', 'Categoría', 'Kategorie', '类别', 'श्रेणी', 'Catégorie', 'الفئة', 'Categoria', 'Категорія'],
+    newGame: ['Nowa gra', 'New game', 'Juego nuevo', 'Neues Spiel', '新游戏', 'नया गेम', 'Nouveau jeu', 'لعبة جديدة', 'Nuovo gioco', 'Нова гра'],
+    bug: ['Błąd', 'Bug', 'Error', 'Fehler', '错误', 'गड़बड़ी', 'Bug', 'خلل', 'Errore', 'Помилка'],
+    improvement: ['Ulepszenie', 'Improvement', 'Mejora', 'Verbesserung', '改进建议', 'सुधार', 'Amélioration', 'تحسين', 'Miglioramento', 'Покращення'],
+    gameName: ['Nazwa gry lub strony', 'Game or page name', 'Nombre del juego o de la página', 'Name des Spiels oder der Seite', '游戏或页面名称', 'गेम या पेज का नाम', 'Nom du jeu ou de la page', 'اسم اللعبة أو الصفحة', 'Nome del gioco o della pagina', 'Назва гри або сторінки'],
+    description: ['Opis', 'Description', 'Descripción', 'Beschreibung', '描述', 'विवरण', 'Description', 'الوصف', 'Descrizione', 'Опис'],
+    emailDraft: ['Otwórz szkic e-maila', 'Open email draft', 'Abrir borrador de correo', 'E-Mail-Entwurf öffnen', '打开邮件草稿', 'ईमेल का मसौदा खोलें', 'Ouvrir le brouillon du courriel', 'فتح مسودة البريد الإلكتروني', 'Apri la bozza del messaggio', 'Відкрити чернетку листа']
+  };
   const installPanel = document.querySelector('#install-games');
   const language = document.querySelector('#language');
   const form = document.querySelector('#game-feedback');
-  const formCopy = [...form.parentElement.querySelectorAll('[data-en]')]
-    .map(element => [element, element.textContent]);
+  const localizedLabels = document.querySelectorAll('[data-label]');
   function read(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
   }
@@ -41,10 +63,8 @@
     const column = languages.indexOf(value);
     const [feedback, aces] = copy[value];
     document.querySelector('[data-copy="feedback"]').textContent = feedback;
-    for (const [element, polish] of formCopy) {
-      const english = element.dataset.en;
-      element.textContent = value === 'pl' ? polish : catalog[english]?.[column] ?? english;
-      element.lang = value === 'pl' || catalog[english] ? value : 'en';
+    for (const element of localizedLabels) {
+      element.textContent = labels[element.dataset.label][column];
     }
     for (const label of document.querySelectorAll('[data-umami-event-game="eight-aces"] span')) label.textContent = aces;
     const [installTitle, installSteps] = installCopy[value];
