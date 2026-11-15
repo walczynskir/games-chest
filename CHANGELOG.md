@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.1.1
+
+- Zmieniono nazwę instrukcji instalacji i usunięto powtórzone linki do gier.
+
 ## 1.1.0 — 2026-11-15
 
 - Dodano wybór gry do zainstalowania i instrukcje instalacji na komputerze oraz telefonie.
