@@ -73,3 +73,7 @@ button, select, input, textarea {
 button { margin-top: .75rem; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+
+#install-steps { max-width: 36rem; }
+#install-links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; padding: 0; list-style: none; }
+#install-links a { display: inline-block; padding-block: .4rem; color: inherit; }
