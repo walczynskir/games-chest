@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.1.4
+
+- Dodano lokalne nazwy Sudoku i Domina na kafelkach katalogu.
+
 ## 1.1.3
 
 - Uzupełniono tłumaczenia formularza zgłoszeń i etykiety wyboru języka.

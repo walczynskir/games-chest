@@ -26,6 +26,8 @@
   };
   // Each row follows the language order in DominoLocales.languages.
   const labels = {
+    sudoku: ['Sudoku', 'Sudoku', 'Sudoku', 'Sudoku', '数独', 'सुडोकू', 'Sudoku', 'سودوكو', 'Sudoku', 'Судоку'],
+    domino: ['Domino', 'Domino', 'Dominó', 'Domino', '多米诺', 'डोमिनो', 'Domino', 'دومينو', 'Domino', 'Доміно'],
     language: ['Język', 'Language', 'Idioma', 'Sprache', '语言', 'भाषा', 'Langue', 'اللغة', 'Lingua', 'Мова'],
     feedbackHelp: [
       'Proponujesz nową grę? Jeśli możesz, dodaj link do zasad lub wklej instrukcję. Zgłaszasz błąd? Opisz, co zrobiłeś tuż przed jego wystąpieniem.',
