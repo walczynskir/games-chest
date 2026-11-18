@@ -18,6 +18,13 @@
     "url": "https://eightaces.games-chest.com/",
     "pl": "Osiem Asów",
     "en": "Eight Aces",
-    "icon": "eightaces-logo.svg"
+    "icon": "eightaces-icon.png"
+  },
+  {
+    "id": "garibaldka",
+    "url": "https://garibaldka.games-chest.com/",
+    "pl": "Garibaldka",
+    "en": "Russian Bank",
+    "icon": "garibaldka-logo.svg"
   }
 ]

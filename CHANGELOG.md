@@ -1,5 +1,10 @@
 # Historia zmian
 
+## 1.2.0 — 2026-11-18
+
+- Dodano Garibaldkę z nazwami zgodnymi z grą we wszystkich dziesięciu językach.
+- Zastosowano ikonę instalacyjną Ośmiu Asów z asem, królem i ósemką.
+
 ## 1.1.4
 
 - Dodano lokalne nazwy Sudoku i Domina na kafelkach katalogu.
