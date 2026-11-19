@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.5 — 2026-11-19
+
+- Ujednolicono podpis kafelka Gomoku we wszystkich językach.
+
 ## 1.3.4 — 2026-11-19
 
 - Odświeżono wersję zasobu tłumaczeń w pamięci przeglądarki.

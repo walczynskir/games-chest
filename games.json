@@ -30,8 +30,8 @@
   {
     "id": "piec-w-rzedzie",
     "url": "https://gomoku.walczynskir.chatgpt.site/",
-    "pl": "Pięć w linii",
-    "en": "Five in a Row",
+    "pl": "Gomoku",
+    "en": "Gomoku",
     "icon": "gomoku-icon.png"
   }
 ]
