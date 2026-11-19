@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.6 — 2026-11-19
+
+- Dodano favicon ze skrzynią na zielonym tle, wygenerowaną za pomocą ImageGen dla Games Chest.
+
 ## 1.3.5 — 2026-11-19
 
 - Ujednolicono podpis kafelka Gomoku we wszystkich językach.
