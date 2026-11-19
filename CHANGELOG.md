@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.0 — 2026-11-19
+
+- Dodano Gomoku (Pięć w rzędzie) 1.0.0 do oferty, z ikoną gry i nazwami we wszystkich dziesięciu językach.
+
 ## 1.2.1 — 2026-11-18
 
 - Zastosowano zaakceptowaną ikonę Garibaldki „Bursztyn” z zasobów gry.

@@ -26,5 +26,12 @@
     "pl": "Garibaldka",
     "en": "Russian Bank",
     "icon": "garibaldka-icon.png"
+  },
+  {
+    "id": "piec-w-rzedzie",
+    "url": "https://gomoku.walczynskir.chatgpt.site/",
+    "pl": "Pięć w rzędzie",
+    "en": "Five in a Row",
+    "icon": "gomoku-logo.svg"
   }
 ]
