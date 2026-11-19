@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.2 — 2026-11-19
+
+- Dodano ilustrowaną ikonę Gomoku z pięcioma czarnymi kamieniami i drewnianą planszą. Grafikę wygenerowano za pomocą ImageGen na potrzeby Games Chest.
+
 ## 1.3.0 — 2026-11-19
 
 - Dodano Gomoku (Pięć w rzędzie) 1.0.0 do oferty, z ikoną gry i nazwami we wszystkich dziesięciu językach.
