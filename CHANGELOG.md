@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.8 — 2026-11-19
+
+- Dodano ikonę drewnianej skrzyni przed nazwą w nagłówku.
+
 ## 1.3.7 — 2026-11-19
 
 - Favicon przedstawia drewnianą skrzynię z mosiężnymi okuciami. Wariant przygotowano w ImageGen.
