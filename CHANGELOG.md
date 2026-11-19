@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.7 — 2026-11-19
+
+- Favicon przedstawia drewnianą skrzynię z mosiężnymi okuciami. Wariant przygotowano w ImageGen.
+
 ## 1.3.6 — 2026-11-19
 
 - Dodano favicon ze skrzynią na zielonym tle, wygenerowaną za pomocą ImageGen dla Games Chest.
