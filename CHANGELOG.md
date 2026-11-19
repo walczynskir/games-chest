@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.3.3 — 2026-11-19
+
+- Zmieniono polską nazwę Gomoku w katalogu na „Pięć w linii”.
+
 ## 1.3.2 — 2026-11-19
 
 - Dodano ilustrowaną ikonę Gomoku z pięcioma czarnymi kamieniami i drewnianą planszą. Grafikę wygenerowano za pomocą ImageGen na potrzeby Games Chest.
