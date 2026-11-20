@@ -1,3 +1,7 @@
+# 1.3.11 — Ikony gier
+
+- Wszystkie ikony na kafelkach mają wspólne zaokrąglenie rogów na wzór Sudoku.
+
 # 1.3.10 — Ikona Domino
 
 - Kafelek Domino pokazuje aktualną ikonę gry z kośćmi na zielonym suknie. Ikona pochodzi z wydania Domino 1.10.1.

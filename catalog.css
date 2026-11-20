@@ -50,7 +50,7 @@ main { padding-block: 1.25rem; }
   text-decoration: none;
 }
 .game:hover { background: #deebdd; text-decoration: underline; }
-.game img { display: block; }
+.game img { display: block; border-radius: 6px; }
 footer { padding-block: .25rem 1.5rem; }
 summary {
   cursor: pointer;
