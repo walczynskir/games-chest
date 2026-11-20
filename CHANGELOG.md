@@ -1,3 +1,7 @@
+# 1.3.10 — Ikona Domino
+
+- Kafelek Domino pokazuje aktualną ikonę gry z kośćmi na zielonym suknie. Ikona pochodzi z wydania Domino 1.10.1.
+
 # 1.3.9 — Nazwa Sudoku
 
 - Kafelek Sudoku pokazuje zaakceptowaną nazwę „Sudoku (krok po kroku)” we wszystkich językach katalogu.
