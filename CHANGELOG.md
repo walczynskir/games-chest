@@ -1,3 +1,7 @@
+# 1.3.9 — Nazwa Sudoku
+
+- Kafelek Sudoku pokazuje zaakceptowaną nazwę „Sudoku (krok po kroku)” we wszystkich językach katalogu.
+
 # Historia zmian
 
 ## 1.3.8 — 2026-11-19

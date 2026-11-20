@@ -2,8 +2,8 @@
   {
     "id": "sudoku",
     "url": "https://rsudoku.pl/",
-    "pl": "Sudoku",
-    "en": "Sudoku",
+    "pl": "Sudoku (krok po kroku)",
+    "en": "Sudoku (step by step)",
     "icon": "sudoku-logo.svg"
   },
   {

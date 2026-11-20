@@ -28,7 +28,7 @@
   const labels = {
     gomoku: ['Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku'],
     garibaldka: ['Garibaldka', 'Russian Bank', 'Crapé', 'Streitpatience', '双人接龙', 'दो खिलाड़ियों का सॉलिटेयर', 'Crapette', 'طنج', 'Crapette', 'Гарібальдка'],
-    sudoku: ['Sudoku', 'Sudoku', 'Sudoku', 'Sudoku', '数独', 'सुडोकू', 'Sudoku', 'سودوكو', 'Sudoku', 'Судоку'],
+    sudoku: ["Sudoku (krok po kroku)", "Sudoku (step by step)", "Sudoku (paso a paso)", "Sudoku (Schritt für Schritt)", "Sudoku（循序渐进）", "Sudoku (कदम दर कदम)", "Sudoku (pas à pas)", "Sudoku (خطوة بخطوة)", "Sudoku (passo dopo passo)", "Sudoku (крок за кроком)"],
     domino: ['Domino', 'Domino', 'Dominó', 'Domino', '多米诺', 'डोमिनो', 'Domino', 'دومينو', 'Domino', 'Доміно'],
     language: ['Język', 'Language', 'Idioma', 'Sprache', '语言', 'भाषा', 'Langue', 'اللغة', 'Lingua', 'Мова'],
     feedbackHelp: [
