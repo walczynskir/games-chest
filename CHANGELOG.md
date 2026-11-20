@@ -1,3 +1,7 @@
+# 1.3.12 — Wyrównanie ikon
+
+- Każdy kafelek rezerwuje dwie linie na nazwę, dzięki czemu ikony zaczynają się na tej samej wysokości.
+
 # 1.3.11 — Ikony gier
 
 - Wszystkie ikony na kafelkach mają wspólne zaokrąglenie rogów na wzór Sudoku.

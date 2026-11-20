@@ -37,7 +37,7 @@ main { padding-block: 1.25rem; }
 .game {
   display: grid;
   justify-items: center;
-  align-content: center;
+  align-content: start;
   gap: .5rem;
   min-height: 7.5rem;
   padding: .65rem;
@@ -51,6 +51,7 @@ main { padding-block: 1.25rem; }
 }
 .game:hover { background: #deebdd; text-decoration: underline; }
 .game img { display: block; border-radius: 6px; }
+.game > span { line-height: 1.25; min-block-size: 2.5em; }
 footer { padding-block: .25rem 1.5rem; }
 summary {
   cursor: pointer;
