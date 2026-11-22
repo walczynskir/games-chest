@@ -1,3 +1,7 @@
+# 1.3.15 — 2026-11-22
+
+- Kafelek Kierek prowadzi do barbu.games-chest.com.
+
 # 1.3.14 — 2026-11-22
 
 - Dodano Kierki do katalogu.
