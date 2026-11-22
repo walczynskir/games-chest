@@ -1,3 +1,7 @@
+# 1.3.13 — 2026-11-22
+
+- Odnośnik do Gomoku kieruje na gomoku.games-chest.com.
+
 # 1.3.12 — Wyrównanie ikon
 
 - Każdy kafelek rezerwuje dwie linie na nazwę, dzięki czemu ikony zaczynają się na tej samej wysokości.
