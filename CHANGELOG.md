@@ -1,3 +1,7 @@
+# 1.3.14 — 2026-11-22
+
+- Dodano Kierki do katalogu.
+
 # 1.3.13 — 2026-11-22
 
 - Odnośnik do Gomoku kieruje na gomoku.games-chest.com.
