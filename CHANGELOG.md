@@ -1,3 +1,7 @@
+# 1.3.16 — 2026-11-23
+
+- Podpis Gomoku w katalogu używa lokalnej nazwy gry we wszystkich dziesięciu językach.
+
 # 1.3.15 — 2026-11-22
 
 - Kafelek Kierek prowadzi do barbu.games-chest.com.

@@ -30,8 +30,16 @@
   {
     "id": "piec-w-rzedzie",
     "url": "https://gomoku.games-chest.com/",
-    "pl": "Gomoku",
-    "en": "Gomoku",
+    "pl": "Pięć w rzędzie",
+    "en": "Five in a Row",
+    "es": "Cinco en raya",
+    "de": "Fünf in einer Reihe",
+    "zh-Hans": "五子棋",
+    "hi": "पाँच एक पंक्ति में",
+    "fr": "Cinq en ligne",
+    "ar": "خمسة على التوالي",
+    "it": "Cinque in fila",
+    "uk": "П’ять у ряд",
     "icon": "gomoku-icon.png"
   },
   {

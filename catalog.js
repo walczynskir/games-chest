@@ -27,7 +27,7 @@
   // Each row follows the language order in DominoLocales.languages.
   const labels = {
     kierki: ["Kierki", "Barbu-King", "Barbu", "Barbu", "凯尔基", "क्येर्की", "Barbu", "باربو كينغ", "Barbu", "Кєркі"],
-    gomoku: ['Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku', 'Gomoku'],
+    gomoku: ["Pięć w rzędzie", "Five in a Row", "Cinco en raya", "Fünf in einer Reihe", "五子棋", "पाँच एक पंक्ति में", "Cinq en ligne", "خمسة على التوالي", "Cinque in fila", "П’ять у ряд"],
     garibaldka: ['Garibaldka', 'Russian Bank', 'Crapé', 'Streitpatience', '双人接龙', 'दो खिलाड़ियों का सॉलिटेयर', 'Crapette', 'طنج', 'Crapette', 'Гарібальдка'],
     sudoku: ["Sudoku (krok po kroku)", "Sudoku (step by step)", "Sudoku (paso a paso)", "Sudoku (Schritt für Schritt)", "Sudoku（循序渐进）", "Sudoku (कदम दर कदम)", "Sudoku (pas à pas)", "Sudoku (خطوة بخطوة)", "Sudoku (passo dopo passo)", "Sudoku (крок за кроком)"],
     domino: ['Domino', 'Domino', 'Dominó', 'Domino', '多米诺', 'डोमिनो', 'Domino', 'دومينو', 'Domino', 'Доміно'],
